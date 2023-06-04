@@ -14,6 +14,6 @@ describe("simple test", () => {
   });
 
   test("temp is 1", () => {
-    expect(temp).toBe(0); // true
+    expect(temp).toBe(1); // true
   });
 });
