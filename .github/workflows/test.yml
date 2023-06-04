@@ -22,10 +22,10 @@ jobs:
         run: cd actions
 
       - name: Install dependencies
-        run: npm ci
+        run: cd actions npm i
 
-      - name: Change directory to test-githubactions
-        run: cd ../
+      # - name: Change directory to test-githubactions
+      #   run: cd ../
 
       - name: Test
-        run: npm test
+        run: cd actions npm test
