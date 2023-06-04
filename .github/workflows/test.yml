@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Change directory
-        run: cd actions
-
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -21,11 +18,11 @@ jobs:
         with:
           node-version: 14
 
+      - name: Change directory to actions
+        run: cd actions
+
       - name: Install dependencies
         run: npm install
-
-      # - name: Build dev
-      #   run: npm run dev
 
       - name: Test
         run: npm test
