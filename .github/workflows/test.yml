@@ -18,14 +18,11 @@ jobs:
         with:
           node-version: 14
 
-      - name: Change directory to actions
-        run: cd actions
-
       - name: Install dependencies
-        run: cd actions npm i
+        run: npm install
 
-      # - name: Change directory to test-githubactions
-      #   run: cd ../
+      - name: Build
+        run: npm run build
 
       - name: Test
-        run: cd actions npm test
+        run: npm test
